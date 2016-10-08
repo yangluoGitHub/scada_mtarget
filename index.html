@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>经营指标</title>
+    <link rel="stylesheet" type="text/css" href="css/mtarget.css">
+</head>
+
+<body>
+    <div id='content'>
+        <div class="up">
+            <div id="ongridStat" class="left" v-cloak>
+                <p>截止{{date}}，{{wfname}}电场{{typeName}}电量经营分析：</p>
+                <!-- <em>截止2016年8月17日，xxx电场上网电量经营分析：</em> -->
+                <div class="underline"></div>
+                <table>
+                    <tr class="row row-1">
+                        <td class="col-1"><img src="img/u15009.png"></td>
+                        <td class="col-2">
+                            <p>
+                                <span>月度</span>
+                            </p>
+                        </td>
+                        <td class="col-3">
+                            <p>
+                                <span>年度</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="row row-2">
+                        <td class="col-1">
+                            <p>
+                                <span>计划{{typeName}}电量(MWh)</span>
+                            </p>
+                        </td>
+                        <td class="col-2">
+                            <p>
+                                <span>{{monthlyPlan}}</span>
+                            </p>
+                        </td>
+                        <td class="col-3">
+                            <p>
+                                <span>{{annualPlan}}</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="row row-3">
+                        <td class="col-1">
+                            <p>
+                                <span>实际{{typeName}}电量(MWh)</span>
+                            </p>
+                        </td>
+                        <td class="col-2">
+                            <p>
+                                <span>{{monthlyActual}}</span>
+                            </p>
+                        </td>
+                        <td class="col-3">
+                            <p>
+                                <span>{{annualActual}}</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="row row-4">
+                        <td class="col-1">
+                            <p>
+                                <span>完成率</span>
+                            </p>
+                        </td>
+                        <td class="col-2">
+                            <p>
+                                <span>{{monthlyActual/monthlyPlan | toPercent }}</span>
+                            </p>
+                        </td>
+                        <td class="col-3">
+                            <p>
+                                <span>{{annualActual/annualPlan | toPercent }}</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="row row-5">
+                        <td class="col-1">
+                            <p>
+                                <span>去年同期</span>
+                            </p>
+                        </td>
+                        <td class="col-2">
+                            <p>
+                                <span>{{sameMonthLastYear}}</span>
+                            </p>
+                        </td>
+                        <td class="col-3">
+                            <p>
+                                <span>{{samePeriodLastYear}}</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="row row-6">
+                        <td class="col-1">
+                            <p>
+                                <span>同比增幅</span>
+                            </p>
+                        </td>
+                        <td class="col-2">
+                            <p>
+                                <span>{{monthlyActual/sameMonthLastYear-1 | toPercent }}</span>
+                            </p>
+                        </td>
+                        <td class="col-3">
+                            <p>
+                                <span>{{annualActual/samePeriodLastYear-1 | toPercent }}</span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="middle">
+            	<div class="yawRate">
+            		<p>偏航率:<span id="ongridLinechartYawRate" style="font-size:30px;font-weight:bolder;"></span></p>
+					<img src="img/u15063.png">
+            	</div>
+            	<div id="ongridLinechart" class="lineChart"></div>
+            </div>
+            <div id="ongridBarchart" class="right"></div>
+        </div>
+        <div class="up">
+            <div id="genEnergyStat" class="left" v-cloak>
+                <p>截止{{date}}，{{wfname}}电场{{typeName}}电量经营分析：</p>
+                <!-- <em>截止2016年8月17日，xxx电场上网电量经营分析：</em> -->
+                <div class="underline"></div>
+                <table>
+                    <tr class="row row-1">
+                        <td class="col-1"><img src="img/u15009.png"></td>
+                        <td class="col-2">
+                            <p>
+                                <span>月度</span>
+                            </p>
+                        </td>
+                        <td class="col-3">
+                            <p>
+                                <span>年度</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="row row-2">
+                        <td class="col-1">
+                            <p>
+                                <span>计划{{typeName}}电量(MWh)</span>
+                            </p>
+                        </td>
+                        <td class="col-2">
+                            <p>
+                                <span>{{monthlyPlan}}</span>
+                            </p>
+                        </td>
+                        <td class="col-3">
+                            <p>
+                                <span>{{annualPlan}}</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="row row-3">
+                        <td class="col-1">
+                            <p>
+                                <span>实际{{typeName}}电量(MWh)</span>
+                            </p>
+                        </td>
+                        <td class="col-2">
+                            <p>
+                                <span>{{monthlyActual}}</span>
+                            </p>
+                        </td>
+                        <td class="col-3">
+                            <p>
+                                <span>{{annualActual}}</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="row row-4">
+                        <td class="col-1">
+                            <p>
+                                <span>完成率</span>
+                            </p>
+                        </td>
+                        <td class="col-2">
+                            <p>
+                                <span>{{monthlyActual/monthlyPlan | toPercent }}</span>
+                            </p>
+                        </td>
+                        <td class="col-3">
+                            <p>
+                                <span>{{annualActual/annualPlan | toPercent }}</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="row row-5">
+                        <td class="col-1">
+                            <p>
+                                <span>去年同期</span>
+                            </p>
+                        </td>
+                        <td class="col-2">
+                            <p>
+                                <span>{{sameMonthLastYear}}</span>
+                            </p>
+                        </td>
+                        <td class="col-3">
+                            <p>
+                                <span>{{samePeriodLastYear}}</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="row row-6">
+                        <td class="col-1">
+                            <p>
+                                <span>同比增幅</span>
+                            </p>
+                        </td>
+                        <td class="col-2">
+                            <p>
+                                <span>{{monthlyActual/sameMonthLastYear-1 | toPercent }}</span>
+                            </p>
+                        </td>
+                        <td class="col-3">
+                            <p>
+                                <span>{{annualActual/samePeriodLastYear-1 | toPercent }}</span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="middle">
+            	<div class="yawRate">
+            		<p>偏航率:<span id="genEnergyLinechartYawRate" style="font-size:30px;font-weight:bolder;"></span></p>
+					<img src="img/u15063.png">
+            	</div>
+            	<div id="genEnergyLinechart" class="lineChart"></div>
+            </div>
+            <div id="genEnergyBarchart" class="right"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/lib/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="js/lib/echarts.min.js"></script>
+    <script type="text/javascript" src="js/lib/vue.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

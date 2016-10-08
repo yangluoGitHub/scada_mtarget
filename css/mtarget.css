@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ol,
+ul,
+li {
+    list-style-type: none;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+#content {
+    width: 1860px;
+    height: 894px;
+    /* top: 20%; */
+    position: absolute;
+    background: #f2f2f2;
+    margin: 0 auto;
+}
+
+.up {
+    margin: 30px 25px;
+    width: 1808px;
+    height: 400px;
+    background: #ffffff;
+    border: solid 1px #cccccc;
+    border-radius: 8px;
+}
+
+.left {
+    // padding: 20px;
+    margin: 15px;
+    float: left;
+    width: 570px;
+    height: 370px;
+}
+
+.middle {
+    margin: 15px;
+    // padding: 25px 0px 0px;
+    float: left;
+    width: 570px;
+    height: 345px;
+}
+
+.right {
+    margin: 15px;
+    padding: 25px 0px 0px;
+    float: left;
+    width: 570px;
+    height: 345px;
+}
+
+
+/**
+ * 自定义下划线
+ */
+
+.underline {
+    border-bottom: 1px solid #e4e4e4;
+    margin-left: 16%;
+    margin-top: 5px;
+}
+
+.left p {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+
+
+.left table {
+    // background: blue;
+    width: 100%;
+}
+
+
+/*table里面文字样式*/
+
+.left table p {
+    font-family: 'Arial Normal', 'Arial';
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    white-space: nowrap;
+}
+
+
+/*table img 元素样式设置*/
+
+.left table img {
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+
+/*设置table 行高度*/
+
+.left table .row {
+    height: 46px;
+}
+
+
+/*单独设置第一行高度*/
+
+.left table .row-1 {
+    height: 60px;
+}
+
+
+/*第一列 文本行左对齐 */
+
+.left table .col-1 {
+    position: relative;
+    left: 10px;
+    text-align: left;
+}
+
+
+/*第二、三列 文本居中对齐*/
+
+.left table .col-2,
+.left table .col-3 {
+    text-align: center;
+}
+
+
+/*第一行 第二、三列加边框*/
+
+.left table .row-1 .col-2 > p,
+.left table .row-1 .col-3 > p {
+    border-style: solid;
+    width: 80px;
+    margin: auto;
+    border: solid 1px #cccccc;
+    border-radius: 8px;
+    line-height: 5px;
+    font-size: 10px;
+}
+
+.row-6 .col-2 > p,
+.row-6 .col-3 > p {
+    font-weight: bold;
+}
+
+
+[v-cloak] {
+  display: none;
+}
+
+
+.yawRate {
+    z-index: 999;
+    height: 50px;
+    width: 150px;
+    position: relative;
+    top:40px;
+    left: 400px;
+
+
+}
+
+.lineChart {
+    height: 320px;
+    width: 100%;
+}
