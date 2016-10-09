@@ -63,7 +63,8 @@
                         left: 'left',
                         textStyle: {
                             fontWeight: 'normal',
-                            fontSize: 15
+                            fontSize: 16,
+                            fontFamily:'Arial Normal',
 
                         },
                         padding: [
@@ -232,7 +233,8 @@
                         left: 'center',
                         textStyle: {
                             fontWeight: 'normal',
-                            fontSize: 15
+                            fontSize: 16,
+                            fontFamily:'Arial Normal',
 
                         },
                         padding: [
