@@ -75,8 +75,6 @@ body {
     font-weight: bolder;
 }
 
-
-
 .left table {
     // background: blue;
     width: 100%;
@@ -151,24 +149,58 @@ body {
     font-weight: bold;
 }
 
-
 [v-cloak] {
-  display: none;
+    display: none;
 }
-
 
 .yawRate {
     z-index: 999;
     height: 50px;
     width: 150px;
     position: relative;
-    top:40px;
+    top: 40px;
     left: 400px;
-
-
 }
 
 .lineChart {
     height: 320px;
     width: 100%;
+}
+
+.gopng_u15009_outer {
+    margin-left: 50px;
+    margin-top: 15px;
+    height: 39px;
+    width: 50px;
+    overflow: hidden;
+}
+
+.gopng_u15009 {
+    background: url(../img/sprite.png) -0px -0px no-repeat;
+    width: 100%;
+    height: 100%;
+    _background: none;
+    _padding-left: 0px;
+    _margin-left: -0px;
+    _padding-top: 0px;
+    _margin-top: -0px;
+    _filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop, src="../img/sprite.png");
+}
+
+.gopng_u15063_outer {
+    height: 21px;
+    width: 141px;
+    overflow: hidden;
+}
+
+.gopng_u15063 {
+    background: url(../img/sprite.png) -50px -0px no-repeat;
+    width: 100%;
+    height: 100%;
+    _background: none;
+    _padding-left: 50px;
+    _margin-left: -50px;
+    _padding-top: 0px;
+    _margin-top: -0px;
+    _filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop, src="../img/sprite.png");
 }

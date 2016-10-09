@@ -16,7 +16,7 @@
             'test/genEnergyLineChart.json', '年计划上网电量、月度计划折算上网电量', 'genEnergyLineChart');
 
         /////
-       /* drawBarChart('ongridBarchart',
+       drawBarChart('ongridBarchart',
             'test/ongridBarChart.json', '本年同期月度上网电量对比', 'ongridEnergyBarChart');
 
         drawBarChart('genEnergyBarchart',
@@ -75,7 +75,7 @@
                     });
                 },
             }
-        });*/
+        });
 
 
 
