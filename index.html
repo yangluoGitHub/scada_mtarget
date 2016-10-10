@@ -6,16 +6,15 @@
     <title>经营指标</title>
     <link rel="stylesheet" type="text/css" href="css/mtarget.css">
 </head>
+
 <body>
     <div id='content'>
-        <div class="up" v-for="mtarget in mtargets">
-            <c-mtarget :my-mtarget="mtarget" :my-index="$index"></c-mtarget>
-        </div>
+        <c-mtarget v-for="mtarget in mtargets" :my-mtarget="mtarget" :my-index="$index"></c-mtarget>
     </div>
     <script type="text/x-template" id="cmtarget">
+        <div class="up">
             <div class="left" v-cloak>
                 <p>截止{{statinfo.date}}，{{statinfo.wfname}}电场{{targetname}}经营分析：</p>
-
                 <div class="underline"></div>
                 <table>
                     <tr class="row row-1">
@@ -133,8 +132,8 @@
                 <div id="{{linechartId}}" class="lineChart"></div>
             </div>
             <div id="{{barchartId}}" class="right"></div>
+        </div>
     </script>
-
     <script type="text/javascript" src="js/lib/jquery-3.1.0.js"></script>
     <script type="text/javascript" src="js/lib/echarts.min.js"></script>
     <script type="text/javascript" src="js/lib/vue.min.js"></script>

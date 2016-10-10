@@ -1,4 +1,5 @@
 (function() {
+    var mtargetUrl = 'test/mtarget.json';
 
     Vue.filter('toPercent', function(value) {
         return (Math.round(value * 10000) / 100).toFixed(2) + '%';
@@ -356,7 +357,7 @@
 
         ready:function(){
             var self = this;
-            $.getJSON('test/mtarget.json',function(response){
+            $.getJSON(mtargetUrl,function(response){
                 console.log(response);
                 self.$data = response.data.cli.dps;
             })
