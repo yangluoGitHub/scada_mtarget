@@ -11,53 +11,46 @@ li {
 
 html,
 body {
-
     margin: 0;
     height: 100%;
     overflow: auto;
 }
 
 #content {
-    width: 93.0rem;
-    height: 44.7rem;
-    /* top: 20%; */
+    width: 100%;
     position: absolute;
     background: #f2f2f2;
-    margin: 0 auto;
 }
 
 .up {
-    margin: 1.5rem 1.25rem;
-    width: 90.4rem;
-    height: 20.0rem;
+    margin: 10px auto;
+    width: 1200px;
+    height: 400px;
     background: #ffffff;
-    border: solid 0.05rem #cccccc;
-    border-radius: 0.4rem;
+    border: solid 1px #cccccc;
+    border-radius: 8px;
 }
 
 .left {
-    // padding: 20px;
-    margin: 0.75rem;
+    margin: 0 0.5%;
     float: left;
-    width: 27.5rem;
-    height: 18.5rem;
+    width: 32.3%;
+    height: 100%;
 }
 
 .middle {
-    margin: 0.75rem;
+    // padding: 25px 0px 0px;
+    margin: 0 0.5%;
     float: left;
-    width: 29rem;
-    height: 17.5rem;
-    position:relative;
-    padding: 1rem 0rem 0rem;
+    width: 32.3%;
+    height: 100%;
 }
 
 .right {
-    margin: 0.75rem;
+    margin: 0 0.5%;
     float: left;
-    width: 29rem;
-    height: 17.5rem;
-    padding: 1rem 0rem 0rem;
+    width: 32.3%;
+    height: 100%;
 }
 
 
@@ -66,28 +59,33 @@ body {
  */
 
 .underline {
-    border-bottom: 0.1rem solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
     margin-left: 16%;
-    margin-top: 0.25rem;
+    margin-top: 0.5%;
 }
 
-.left p {
-    padding: 0.5rem 1.0rem;
-    font-size: 1rem;
-    font-weight: bolder;
-}
+
 
 .left table {
     // background: blue;
     width: 100%;
+    height: 80%;
+}
+
+.left .stat-title {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    height: 5%;
 }
 
 
 /*table里面文字样式*/
 
 .left table p {
+    padding: 0.625rem;
     font-family: 'Arial Normal', 'Arial';
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
     font-style: normal;
     white-space: nowrap;
@@ -95,18 +93,17 @@ body {
 
 
 
-
 /*设置table 行高度*/
 
 .left table .row {
-    height: 2.3rem;
+    height: 12%;
 }
 
 
 /*单独设置第一行高度*/
 
 .left table .row-1 {
-    height: 3.0rem;
+    height: 15%;
 }
 
 
@@ -114,7 +111,7 @@ body {
 
 .left table .col-1 {
     position: relative;
-    left: 0.5rem;
+    left: 1rem;
     text-align: left;
 }
 
@@ -132,12 +129,12 @@ body {
 .left table .row-1 .col-2 > p,
 .left table .row-1 .col-3 > p {
     border-style: solid;
-    width: 4.0rem;
+    width: 80px;
     margin: auto;
-    border: solid 0.05rem #cccccc;
-    border-radius: 0.4rem;
-    line-height: 0.25rem;
-    font-size: 0.6rem;
+    border: solid 1px #cccccc;
+    border-radius: 8px;
+    line-height: 5px;
+    font-size: 10px;
 }
 
 .row-6 .col-2 > p,
@@ -151,36 +148,34 @@ body {
 
 .yawRate {
     z-index: 999;
-    height: 2.5rem;
-    width: 7.5rem;
-    position: absolute;
-    top: 2.5rem;
-    left: 22.0rem;
+    width: 35%;
+    height: 10%;
+    float: right;
+    position: relative;
+    top:10%;
+    right: 2%;
+    // background: red;
 }
 
 .yawRateText {
-    font-size: 0.9rem;
-}
-
-.yawRateText span {
-    font-size:1.1rem;
-    font-weight:bolder;
+    font-size:0.625rem;
+    text-align: center;
 }
 
 .lineChart {
-    height: 100%;
+    height: 90%;
     width: 100%;
 }
 
 .gopng_u15009_outer {
-    margin-left: 1.0rem;
-    height: 19px;
-    width: 25px;
+    margin-left: 16%;
+    height: 39px;
+    width: 50px;
     overflow: hidden;
 }
 
 .gopng_u15009 {
-    background: url(../img/sprite.png) -0.0px -0.0px no-repeat;
+    background: url(../img/sprite.png) -0px -0px no-repeat;
     width: 100%;
     height: 100%;
     _background: none;
@@ -192,18 +187,19 @@ body {
 }
 
 .gopng_u15063_outer {
-    height: 10px;
-    width: 70px;
+    height: 21px;
+    width: 141px;
     overflow: hidden;
+    float: right;
 }
 
 .gopng_u15063 {
-    background: url(../img/sprite.png) -25px -0.0px no-repeat;
+    background: url(../img/sprite.png) -50px -0px no-repeat;
     width: 100%;
     height: 100%;
     _background: none;
-    _padding-left: 25px;
-    _margin-left: -25px;
+    _padding-left: 50px;
+    _margin-left: -50px;
     _padding-top: 0px;
     _margin-top: -0px;
     _filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop, src="../img/sprite.png");

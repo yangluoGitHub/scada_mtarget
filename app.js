@@ -1,5 +1,5 @@
 (function() {
-    var mtargetUrl = 'test/mtarget.json';
+    var mtargetUrl = '/test/mtarget.json';
 
     Vue.filter('toPercent', function(value) {
         return (Math.round(value * 10000) / 100).toFixed(2) + '%';
@@ -64,10 +64,11 @@
                         left: 'left',
                         textStyle: {
                             fontWeight: 'normal',
-                            fontSize: 16,
+                            fontSize: 14,
                             fontFamily:'Arial Normal',
 
                         },
+                        top:'8%',
                         padding: [
                             5, // 上
                             10, // 右
@@ -98,6 +99,9 @@
                         splitLine: {
                             show: false
                         },
+                        axisLabel:{
+                            interval:0
+                        },
                         data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
                     },
                     grid: {
@@ -125,7 +129,7 @@
                         axisLabel: {
                             show: true,
                             textStyle: {
-                                fontSize: 10 //最小就是12 设置10 和12 好像没差别
+                                fontSize: 12 //最小就是12 设置10 和12 好像没差别
                             }
                         }
                     },
@@ -234,7 +238,7 @@
                         left: 'center',
                         textStyle: {
                             fontWeight: 'normal',
-                            fontSize: 16,
+                            fontSize: 14,
                             fontFamily:'Arial Normal',
 
                         },
@@ -257,6 +261,10 @@
                     xAxis: {
                         type: 'category',
                         splitLine: { show: false },
+
+                        axisLabel:{
+                            interval:0
+                        },
                         data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
                     },
                     grid: {
